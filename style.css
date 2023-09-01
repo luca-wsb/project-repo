@@ -1,6 +1,8 @@
 :root {
     --lw1: #708cfa;
     --lw2: #fae88c;
+    --lws: #8dfc65;
+    --lwe: #fc6565;
 }
 
 html, body {
@@ -8,6 +10,7 @@ html, body {
     width: 100%;
     padding: 0;
     margin: 0;
+    font-family: sans-serif;
 }
 
 body {
@@ -18,17 +21,32 @@ a {
     text-decoration: none;
 }
 
+.success, .error {
+    padding: 15px;
+    color: #fff;
+    background-color: var(--lws);
+}
+
+.error {
+    background-color: var(--lwe) !important;
+}
+
+/* NAVBAR - NAVBAR - NAVBAR */
+
+
+
 .navbar {
     background-color: var(--lw1);
     width: 95%;
-    padding: 10px;
+    padding: 15px;
     margin: 20px auto;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 
 .navbar ul {
     padding: 0;
     margin: 0;
+    width: 100%;
     list-style-type: none;
     text-align: center;
 }
@@ -36,16 +54,63 @@ a {
 .navbar ul li {
     margin: 5px;
     display: inline-block;
-}
+}   
 
-.navbar ul li a {
+.navbar ul li a, #login a {
     color: #333;
     padding: 10px;
     font-size: 20px;
     background-color: #fff;
     border-radius: 10px;
-} 
+}
 
-#login {
-    float: right;
+
+
+/* FORMS - FORMS - FORMS */
+
+
+
+.login-form, .signup-form, .user-req {
+    text-align: center;
+    color: #fff;
+    margin-top: 50px;
+}
+
+.login-form h1 {
+    font-size: 45px;
+}
+
+#staff {
+    font-size: 17px;
+    margin-top: -20px;
+}
+
+#no-account {
+    font-size: 13px;
+    margin-top: 30px;
+}
+
+#no-account a{
+    color: var(--lw1);
+    text-decoration: underline;
+}
+
+input[type=text], input[type=password], input[type=email] {
+    font-family: sans-serif;
+    display: block;
+    width: 200px;
+    margin: 5px auto;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+}
+
+input[type=submit] {
+    background-color: var(--lws);
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+    width: 120px;
+    font-size: 18px;
 }
